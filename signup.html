@@ -21,7 +21,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="NGO.html">Schedule</a></li>
-          <li><a class="current" href="login.html">Login</a></li>
+          <li><a class="current" href="signup.html">Login</a></li>
           <li><a href="products.html">Products</a></li>
         </ul>
       </div>
@@ -32,7 +32,125 @@
       </video>
     <div id="container">
       <div class=form-wrap>
+        <h1>Sign Up</h1>
+
+
+        <body>
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname"  placeholder="firstname"/>
+          <br>
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="lastname" />
+          <br>
+          <label for="email">Email</label><br>
+          <input type="email" name="email" id="email" placeholder="email" />
+          <br>
+          <label for="password">Password</label><br>
+          <input type="password" name="password" id="password"  placeholder="password"/>
+          <br>
+          <label for="password">Confirm Password</label>
+          <input type="password" name="passwordtwo" id="passwordtwo" placeholder="confirm password">
+          <br>
+          <button id="button">register</button>
+        
+          <button id="login"><a href="./role.html">LOGIN </button></a>
       
+          <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+            import {
+              getAuth,
+              createUserWithEmailAndPassword,
+              signInWithEmailAndPassword
+            } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+      
+            import {
+              getDatabase,
+              set,
+              ref,
+              
+              child
+            } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+      
+            const firebaseConfig = {
+              apiKey: "AIzaSyAsjKcG4_9oVabiY3BGLaq3cyKLpVE8aIw",
+              authDomain: "ngo-database-a3331.firebaseapp.com",
+              databaseURL: "https://ngo-database-a3331-default-rtdb.firebaseio.com",
+              projectId: "ngo-database-a3331",
+              storageBucket: "ngo-database-a3331.appspot.com",
+              messagingSenderId: "661666718917",
+              appId: "1:661666718917:web:2e00dc06477ec2c9bbfcac",
+              measurementId: "G-WXL8CRHR40",
+            };
+      
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+            const auth = getAuth();
+            const database = getDatabase(app);
+      
+            document.getElementById("button").addEventListener("click", function(){
+              var name = document.getElementById("firstname").value;
+              var surname = document.getElementById("lastname").value;
+              var email = document.getElementById("email").value;
+              var password =document.getElementById("password").value;
+           
+              createUserWithEmailAndPassword(auth, email, password)
+              .then((usercredential)=>{
+      
+                  const user = usercredential.user;
+                  console.log(user);
+      
+                  set(ref(database,'users/'+user.uid),{
+                      firstname: name,
+                      lastname: surname,
+                      Email: email,
+                      last_login: Date.now()
+                  })
+      
+                  alert("registration successfully");
+              }).catch((error)=>{
+                  const errorcode = error.code;
+                  const errorMessafe = error.message;
+      
+                  console.log(errorMessafe);
+                  alert(error);
+              });
+      
+              console.log("bankai");
+      
+      
+              
+            });
+      
+            ///////////LOGIN/////////////
+      
+            document.getElementById("login").addEventListener("click",function() {
+              var email = document.getElementById("email").value;
+              var Password = document.getElementById("password").value;
+      
+              signInWithEmailAndPassword(auth, email, Password)
+              .then(()=>{
+                
+                alert("USER LOGGED IN");
+              })
+              .catch((error)=>{
+                const errorcode = error.code;
+                  const errorMessafe = error.message;
+      
+                  console.log(errorMessafe);
+                  alert(error);
+      
+              })
+      
+            }
+      );
+      
+      
+            
+          </script>
+<!--       
 
         <h1>Sign Up</h1>
         <p>It's free and only takes a minute</p>
@@ -56,14 +174,12 @@
           <div class"form-group>
             <label for="password2">Confirm Password</label><br>
             <input type="password" name="Password2" id="Password2" size=30/>
-          </div>
-          Role:
-          <input type="radio" name="Role">NGOs
-          <input type="radio" name="Role">Industries
+          </div> -->
+         
           
-          <input type="submit" class="btn" id='signUp' name="signup_submit" value="Sign up" onclick="signup()" />
-           <p class="button-text">
-             By Clicking the Sign Up button,you agree to our
+          <!-- <input type="submit" class="btn" id='register' name="register" value="register" onclick="register()" />
+           <p class="button-text"> -->
+             By Clicking the register button,you agree to our
              <a href="#">Terms & condition</a> and
              <a href="#">privacy policy</a>
            </p>
@@ -72,64 +188,7 @@
          </div>
         
       </div>
-      <script src="./signup.js"></script>
-    </body>
-    <script type="module">
-      
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
-      import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
-      import { getAuth }  from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
-     
 
-      const firebaseConfig = {
-        apiKey: "AIzaSyD5hLtseWV161Er8eJHgEC4tg2gJGNqFuc",
-        authDomain: "Tidyblue-82b36.firebaseapp.com",
-        databaseURL: "https://Tidyblue-82b36-default-rtdb.firebaseio.com",
-        projectId: "Tidyblue-82b36",
-        storageBucket: "Tidyblue-82b36.appspot.com",
-        messagingSenderId: "485596212663",
-        appId: "1:485596212663:web:5aa455c643e0d6990c8c32"
-      };
-    
-      // Initialize Firebase
-      var firebase;
-      firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  const auth = firebase.auth(); 
-  const db = firebase.firestore();
-
-      signUp.addEventListener("click",(e) => {
-        e.preventDefault();
-        var firstName = document.getElementById("firstName").value;
-        var firstName = document.getElementById("lastName").value;
-        var Email= document.getElementById("Email").value;
-        var Password = document.getElementById("Password").value;
-        var Password2 = document.getElementById("Password2").value;
-
-        createUserWithEmailAndPassword(auth, Email, Password)
-        .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    alert("user created!");
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-
-    alert("errorMessage");
-
-    // ..
-  });
-
-      })
-
-
-
-
-
-    </script>
     <br><br><br>
         <footer id="main-footer">
           <p>Tidy Blue &copy; 2023, All RIghts Reserved</p>
