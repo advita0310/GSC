@@ -7,7 +7,7 @@
   
   /* Main Styling */
   html,body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Comic Sans MS";
     line-height: 1.7em;
   }
   
@@ -33,7 +33,7 @@
   }
   
   .text-primary {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     color: #fff;
   }
   
@@ -72,7 +72,7 @@
     color: #3192eb;
   }
   .boxa {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     font-size: 20px;
     float:left;
     width: 33.3%;
@@ -100,51 +100,52 @@
   .py-2 { padding: 20px 0; }
   .py-3 { padding: 30px 0; }
   
-  /* Navbar */
-  #navbar {
-    background: #fff;
-    color: #3192eb;
-    overflow: auto;
-  }
-  
-  #navbar a {
-    color: #3192eb;
-  }
-  
-  #navbar h1 {
-    font-family:  'Comic Sans MS';
+ /* Navbar */
+ #navbar {
+  background: #fff;
+  color: #3192eb;
+  overflow: auto;
+}
+
+#navbar a {
+  color: #3192eb;
+}
+
+#navbar h1 {
+  font-family: "Comic Sans MS";
+  float: left;
+  padding-top: 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  font-family: "Comic Sans MS";
+  float: left;
+  font-size: 20px;
+}
+ 
+#navbar img {
     float: left;
-    padding-top: 20px;
-  }
-  
-  #navbar ul {
-    list-style: none;
-    float: right;
-  }
-  
-  #navbar ul li {
-    font-family: 'Comic Sans MS';
-    float: left;
-    font-size: 20px;
-  }
-   
-  #navbar img {
-      float: left;
-      width: 80px;
-      height:80px;
-      
-  }
-  #navbar ul li a {
-    display: block;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  #navbar ul li a:hover, 
-  #navbar ul li a.current {
-    background: #cae1ff;
-    color: #088da5;
-  }
+    width: 80px;
+    height:80px;
+    
+}
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+#navbar ul li a:hover, 
+#navbar ul li a.current {
+  background: #cae1ff;
+  color: #088da5;
+}
+
   
   /* Showcase */
   #showcase {
@@ -155,19 +156,20 @@
   
   #showcase .showcase-content {
     color: #fff;
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     text-align: center;
     padding-top: 170px;
   }
   
   #showcase .showcase-content h1 {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     font-size: 100px;
     line-height: 1.2em;
+    animation-name: inherit;
   }
   
   #showcase .showcase-content h2 {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     padding-bottom: 20px;
     line-height: 1.7em;
   }
@@ -187,19 +189,19 @@
   
   /* Home Info */
   #home-info {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     padding-top: 100px;
     background: #fff;
     height: 400px;
   }
   
   #home-info h2 {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     color: #3192eb
   }
   
   #home-info .info-content {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     float: center;
     width: 100%;
     height: 100%;
@@ -210,7 +212,7 @@
   }
   
   #home-info .info-content p {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     padding-bottom: 30px;
     color: #3192eb;
   }
@@ -222,7 +224,7 @@
     width: 33.3%;
     padding: 50px;
     text-align:center;
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
   }
   
   .box i {
@@ -307,7 +309,7 @@
   
   /* Caption text */
   .text {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     color: #fff;
     font-size: 20px;
   
@@ -356,7 +358,7 @@
    
 /*ngo*/
   .abtngo{
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     font-size: 20px;
     float:left;
     width: 50%;
@@ -372,7 +374,7 @@
   }
 
   .abtind{
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     font-size: 20px;
     float:left;
     width: 100%;

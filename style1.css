@@ -15,7 +15,7 @@
     padding:0
   }
   body{
-      font-family:'raleway',sans-serif;
+      font-family: "Comic Sans MS";
       background: url('./images/bg.jpeg') no-repeat center/cover;
       color:#fff;
       line-height:1.8;
@@ -31,7 +31,7 @@
   }
   .form-wrap{
 
-      font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
       background:#fff;
       padding: 15px 25px;
       color:#3192eb;
@@ -85,7 +85,7 @@
   }
   
   #navbar h1 {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     float: left;
     padding-top: 20px;
   }
@@ -96,7 +96,7 @@
   }
   
   #navbar ul li {
-    font-family: 'Comic Sans MS';
+    font-family: "Comic Sans MS";
     float: left;
     font-size: 20px;
   }
@@ -118,6 +118,10 @@
     background: #cae1ff;
     color: #088da5;
   }
+
+  .btn a {
+      color:white;
+  }
   
 
 
@@ -127,15 +131,16 @@
 table {
   padding-left: 20px;
   padding-right: 20px;
-  font-family: 'Comic Sans MS';
+  font-family: "Comic Sans MS";
   border-collapse: collapse;
   width: 100%;
+  border-radius: 15px;
 }
 
 td, th {
   padding-left: 20px;
   padding-right: 20px;
-  font-family: 'Comic Sans MS';
+  font-family: "Comic Sans MS";
   color:#3192eb;
   background-color: #fff;
   border: 3px solid #dddddd;
@@ -149,7 +154,7 @@ tr:nth-child(even) {
 }
 
  #top{
-  font-family:'Comic Sans MS';
+  font-family: "Comic Sans MS";
   margin:10px auto;
    max-width: 1300px;
  }
@@ -168,7 +173,7 @@ tr:nth-child(even) {
 }
 
 #footer a{
-  color:;
+  color:#fff;
 }
 * {box-sizing:border-box}
 
@@ -200,9 +205,23 @@ tr:nth-child(even) {
       margin-top: 20px;
       color:#fff;
       cursor: pointer;
+      border-radius: 15px;
   
   }
   #btn a{
     color: #fff;
   }
   
+
+  .box { 
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    height: 40px; 
+    text-align: center; 
+  }
+  
+  .box .container-1 input{
+     width: 100%;
+     box-align: center;
+  }
